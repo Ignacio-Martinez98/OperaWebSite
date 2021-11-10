@@ -1,0 +1,87 @@
+﻿body {    
+    margin: auto;
+    height:750px;
+}
+#banner {
+    height:250px;
+    width: 70%;    
+    float: left;
+}
+#img1 {
+    height: 250px;
+    width: 50%;
+}
+#img2 {
+    height: 250px;
+    float: left;
+    width: 50%;
+}
+#loggin {
+    width: 30%;
+    height: 250px;
+    background-color: skyblue;
+    float: right;
+}
+nav {
+    height: 50px;
+    background-color: brown;
+    clear:both;
+    text-align:right;
+    font-size:25px;
+}
+article {
+    width: 60%;
+    height: 400px;
+    background-color: rgb(247, 102, 49);
+    float: left;
+    font-size:30px;
+}
+#left {
+    width: 20%;
+    height: 400px;
+    background-color: rgb(248, 106, 54);
+    float: left;
+}
+#parrafo1{
+    border-block:2.5px dashed;
+}
+#right {
+    height: 400px;
+    background-color: coral;
+}
+#ImagenRight{
+    height:133.33px;
+    width:20.3%
+}
+
+ul{
+    font-size:0;
+}
+footer {
+    height: 50px;
+    background-color: red;
+    clear: both;
+}
+ #Mozart {
+    font-size: 30px;
+    color: darkviolet;
+}
+a,#CompImg{
+    height:auto;
+    width:7%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

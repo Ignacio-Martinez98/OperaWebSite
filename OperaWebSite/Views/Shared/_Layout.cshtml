@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/main.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="conteiner">
+        <header>
+            <section id="banner">
+                <img id="img1" src="~/Images/teatro_colon_interior_nicolas1500x610.jpg" />
+                <img id="img2" src="~/Images/1065801779_0_61_2607_1699_1920x0_80_0_0_cc5026c04c4aed4a765abb05d1a8a55d.jpg" />
+            </section>
+            <section id="loggin">loggin</section>
+        </header>
+        <nav>
+            @Html.ActionLink("Inicio", "Index", "Home")
+            @Html.ActionLink("Opera", "Index", "Home")
+            @Html.ActionLink("Empleado", "Index", "Home")
+        </nav>
+        <main>
+            <aside id="left">
+                @if (IsSectionDefined("AsideLeft"))
+                {
+                    @RenderSection("AsideLeft")
+                }
+                else
+                { 
+                        <h2>011 4378-7100</h2>
+                        <br />
+                        <h2>Cerrito, 628, Ciudad Autónoma de Buenos Aires</h2>                  
+                }
+            </aside>
+            <article>@RenderBody()</article>
+            <aside id="right">
+                @if (IsSectionDefined("AsideRight"))
+                {
+                    @RenderSection("AsideRight")
+                }
+                else
+                {
+                <ul>
+                    <li><img id="ImagenRight" src="~/Images/teatrocolon.jpeg" /></li>
+                    <li><img id="ImagenRight" src="~/Images/descarga.jpg" /></li>
+                    <li><img id="ImagenRight" src="~/Images/descarga (1).jpg" /></li>
+                </ul>
+                }
+            </aside>
+        </main>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>

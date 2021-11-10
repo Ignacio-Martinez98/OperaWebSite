@@ -1,0 +1,50 @@
+﻿@model IEnumerable<OperaWebSite.Models.Opera>
+
+@*Este control genera en el cliente una etiqueta <a>*@
+<p>@Html.ActionLink("Create New", "Create", "Opera")</p>
+<table>
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.Title)</th> @*DisplayNameFor() Imprime el nombre de la propiedad*@
+        <th>@Html.DisplayNameFor(model => model.Composer)</th>
+        <th>@Html.DisplayNameFor(model => model.Year)</th>
+        <th>Detail</th>
+        <th>Delete</th>
+        <th>Edit</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.Title)</td> @*DisplatFor() Imprime el valor de la propiedad*@
+            <td>@Html.DisplayFor(modelItem => item.Composer)</td>
+            <td>@Html.DisplayFor(modelItem => item.Year)</td>
+            <td>
+                @Html.ActionLink("Detail", "Detail", new { id = item.OperaID })
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "Delete", new { id = item.OperaID })
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.OperaID })
+            </td>
+        </tr>
+    }
+</table>
+@section AsideLeft
+    {
+
+    <p><a id="Mozart" href="https://www.youtube.com/watch?v=SJI43UaGeCc">La Flauta Mágica</a></p>
+    <br />
+    <p><a id="Mozart" href="https://www.youtube.com/watch?v=Ioc9shJa_lI">Don Giovanni</a></p>
+    <br />
+    <p><a id="Mozart" href="https://www.youtube.com/watch?v=rkw_coO3pl8">Las Boldas de Figaro</a></p>
+
+}
+@section AsideRight
+    {
+    <p><a href="https://es.wikipedia.org/wiki/Giuseppe_Verdi"><img id="CompImg" src="~/Images/Giuseppe Verdi.jpg" /></a></p>
+    <p><a href="https://es.wikipedia.org/wiki/Giacomo_Puccini"><img id="CompImg" src="~/Images/Giacomo Puccini.jpg" /></a></p>
+    <p><a href="https://es.wikipedia.org/wiki/Gioachino_Rossini"><img id="CompImg" src="~/Images/Gioachino Rossini.jpg" /></a></p>
+    }
+
+
+

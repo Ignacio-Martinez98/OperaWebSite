@@ -1,0 +1,33 @@
+﻿@model OperaWebSite.Models.Opera
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+    @using (Html.BeginForm("Create", "Opera", FormMethod.Post))
+    {
+        <div>
+            @Html.LabelFor(model => Model.Title)    @*Bloque para ingresar el titulo*@
+            @Html.EditorFor(model => Model.Title)
+            @Html.ValidationMessageFor(model => Model.Title)
+        </div>
+        <div>
+            @Html.LabelFor(model => Model.Composer)    @*Bloque para ingresar el compositor*@
+            @Html.EditorFor(model => Model.Composer)
+            @Html.ValidationMessageFor(model => Model.Composer)
+        </div>
+        <div>
+            @Html.LabelFor(model => Model.Year)         @*Bloque para ingresar el año*@
+            @Html.EditorFor(model => Model.Year)
+            @Html.ValidationMessageFor(model => Model.Year)
+        </div>
+        <p>
+            <input type="submit" value="Create"/>
+        </p>
+    }
+    @Html.ActionLink("Back to List","Index","Opera")
+</body>
+</html>

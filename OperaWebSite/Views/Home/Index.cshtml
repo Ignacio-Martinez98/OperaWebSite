@@ -1,0 +1,31 @@
+﻿
+
+<body>
+    <div> 
+        <h1>Bienvenido  al sistema Web del Teatro Colon</h1>        
+    </div>
+    <div>
+        <h3>@ViewBag.Fecha</h3>
+        <h3>@ViewBag.Hora</h3>
+        <br />
+        <h3>@Html.ActionLink("Ir a operas", "Index", "Opera") </h3>
+    </div>
+    <div>
+        @section AsideLeft
+            {
+                <p id="parrafo1">El teatro Colón es un teatro de ópera de la Ciudad Autónoma de Buenos Aires. Por su tamaño, acústica y trayectoria, ha llegado a ser considerado como el mejor teatro lírico del mundo.​ Según una encuesta realizada por el experto en acústica Leo Beranek a destacados directores internacionales de ópera y de orquesta, el Teatro Colón posee la sala con la mejor acústica para ópera y la segunda mejor para conciertos del mundo</p>
+
+                <p id="parrafo1">Comparable con las salas líricas más importantes del mundo, como la Scala de Milán, el Metropolitan Opera House de Nueva York, la Ópera Estatal de Viena, la Royal Opera House (Covent Garden) de Londres y la Ópera de París, es índice inequívoco de consagración para quienes se presentan en él y lugar ineludible para los amantes de la música. El Colón ha sido desde siempre un teatro venerado por el público y por los artistas más renombrados. A su vez, es sede de la Orquesta Estable, el Coro Estable, el Ballet Estable del Teatro Colón y de la Orquesta Filarmónica de Buenos Aires.</p>
+            }
+    </div>
+    <div>
+        @section AsideRight
+            {
+            <ul>
+                <li><img id="ImagenRight" src="~/Images/interior1.jpg" /></li>
+                <li><img id="ImagenRight" src="~/Images/interior2.jpg" /></li>
+                <li><img id="ImagenRight" src="~/Images/interior3.jpg" /></li>
+            </ul>
+        }
+    </div>
+</body>
